@@ -15,7 +15,16 @@ namespace Exercises
         /// <returns></returns>
         public static int lg(int n)
         {
-            return 0;
+
+
+            if (IsEven(n))
+            {
+                return LogBase2(n);
+            }
+            else
+                return LogBase2(n - 1);
+
+            
         }
 
         public static int LogBase2(int n)

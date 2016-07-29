@@ -48,13 +48,22 @@ namespace Exercises.Tests
 
             double y = 3;
 
-            for(int i = 0; i < 1000; i++)
+            for (int i = 0; i < 1000; i++)
             {
                 int expected = (int)Math.Pow((double)i, y);
                 int actual = Chapter1.Pow(i, (int)y);
                 string message = "expected :" + expected.ToString() + " actual: " + actual.ToString();
                 Assert.AreEqual(expected, actual, message);
             }
+        }
+
+        [TestMethod()]
+        public void lgTest()
+        {
+            int actual = Chapter1.lg(8);
+            int expected = 3;
+            string message = "expected: " + expected.ToString() + " actual: " + actual.ToString();
+            Assert.AreEqual(expected, actual, message);
         }
     }
 }
