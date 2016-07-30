@@ -14,7 +14,8 @@ namespace Algorithims
             int hi = a.Length - 1;
 
             while (lo <= hi) // Key is in a[lo..hi] or not present.
-            {
+            { 
+
                 int mid = lo + (hi - lo) / 2;
                 // If key is in [lo...hi] or not present
                 if (key < a[mid])
@@ -25,9 +26,10 @@ namespace Algorithims
                 {
                     lo = mid + 1;
                 }
-                else return mid; // If I leave out the == operator, it will also return mid if there is no key inbetween [lo...hi].
+                else return mid;
+
             }
-            throw new ArgumentException("the array int[]a must have a length greater then 0!", a.ToString());
+            return -1;
             
         }
     }
