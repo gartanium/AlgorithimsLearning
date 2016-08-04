@@ -52,6 +52,7 @@
   </Choose>
   <ItemGroup>
     <Compile Include="BinarySearchTests.cs" />
+    <Compile Include="ExpressionEvaluationTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
