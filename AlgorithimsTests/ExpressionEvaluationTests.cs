@@ -19,6 +19,9 @@ namespace Algorithims.Tests
             Assert.AreEqual(8, ExpressionEvaluation.Evaluate("(2 ^ 3)"));
             Assert.AreEqual(4, ExpressionEvaluation.Evaluate("(2 * 2)"));
             Assert.AreEqual(1, ExpressionEvaluation.Evaluate("(2 / 2)"));
+
+            Assert.AreEqual(8, ExpressionEvaluation.Evaluate("(((4 / 2) + 2) + 4)"));
+            Assert.AreEqual(10, ExpressionEvaluation.Evaluate("(20 - 10)"));
         }
     }
 }

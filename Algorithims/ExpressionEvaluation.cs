@@ -17,10 +17,24 @@ namespace Algorithims
             
             Stack<char> operators = new Stack<char>();
             Stack<double> values = new Stack<double>();
-            List<char> charToNumberList = new List<char>();
+            string numberString = "";
 
             for(int i = 0; i < inputString.Length; i++)
             {
+                if(numberString.Length > 0)
+                {
+                    double result;
+                    if(double.TryParse(inputString[i].ToString(), out result))
+                    {
+                        numberString += result.ToString();
+                    }
+                    else
+                    {
+                        values.Push(double.Parse(numberString));
+                        numberString = "";
+                    }
+                }
+                
                 switch(inputString[i])
                 {
                     // Pop if ) appears
@@ -81,9 +95,7 @@ namespace Algorithims
                     case ' ':
                         break;
                     default:
-                        double outResult;
-                      
-                        values.Push(double.Parse(inputString[i].ToString()));
+                        numberString += inputString[i];
                         break;
                 
                 }
