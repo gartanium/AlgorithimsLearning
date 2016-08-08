@@ -17,24 +17,33 @@ namespace Algorithims
             
             Stack<char> operators = new Stack<char>();
             Stack<double> values = new Stack<double>();
+            // Used as a place holder for numbers in the input string. It is useful because it can be used to read numbers larger then 9. 
+            // As the itteration statement iterates, any time it comes across a number, it adds it to the numberString. If the input string
+            // Continues to hold number characters for the given real number, it adds it to the string. Once it no longer runs across number characters,
+            // The string is set to an empty value.
             string numberString = "";
 
+            // For each element in the length of the string
             for(int i = 0; i < inputString.Length; i++)
             {
+                //
                 if(numberString.Length > 0)
                 {
                     double result;
                     if(double.TryParse(inputString[i].ToString(), out result))
                     {
                         numberString += result.ToString();
+                        continue;
                     }
                     else
                     {
                         values.Push(double.Parse(numberString));
                         numberString = "";
+                       
                     }
                 }
-                
+                // Interprets which ever character is in the string at the given location i. Depending on the condition, 
+                // Add a value to the stack or pop the stack.
                 switch(inputString[i])
                 {
                     // Pop if ) appears
@@ -66,7 +75,7 @@ namespace Algorithims
                                     break;
                                 default:
                                     throw new ArgumentException("Syntax error!");
-                                    break;
+                                    
                             }
 
                         }

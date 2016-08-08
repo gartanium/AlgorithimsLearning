@@ -53,6 +53,7 @@
   <ItemGroup>
     <Compile Include="BinarySearchTests.cs" />
     <Compile Include="ExpressionEvaluationTests.cs" />
+    <Compile Include="ExtraClasses\FixedCapacityStackOfStringsTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

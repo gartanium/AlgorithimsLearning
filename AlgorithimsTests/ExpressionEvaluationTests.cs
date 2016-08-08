@@ -20,7 +20,10 @@ namespace Algorithims.Tests
             Assert.AreEqual(4, ExpressionEvaluation.Evaluate("(2 * 2)"));
             Assert.AreEqual(1, ExpressionEvaluation.Evaluate("(2 / 2)"));
 
+            Assert.AreEqual(10, ExpressionEvaluation.Evaluate("(1 + 1) * ((5/5) * 5))"));
+
             Assert.AreEqual(8, ExpressionEvaluation.Evaluate("(((4 / 2) + 2) + 4)"));
+            Assert.AreEqual(2, ExpressionEvaluation.Evaluate("(10 - 8)"));
             Assert.AreEqual(10, ExpressionEvaluation.Evaluate("(20 - 10)"));
         }
     }
