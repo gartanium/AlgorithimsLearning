@@ -53,14 +53,18 @@
   <ItemGroup>
     <Compile Include="BinarySearchTests.cs" />
     <Compile Include="ExpressionEvaluationTests.cs" />
-    <Compile Include="ExtraClasses\FixedCapacityStackOfStringsTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QueueLearning\FifoQueueTests.cs" />
+    <Compile Include="StackLearning\GenericStackResizingTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Algorithims\Algorithims.csproj">
       <Project>{836D3E0C-A23A-4FC8-8E7A-E1F383FA6396}</Project>
       <Name>Algorithims</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ExtraClasses\" />
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

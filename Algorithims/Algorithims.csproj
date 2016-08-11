@@ -42,8 +42,9 @@
   <ItemGroup>
     <Compile Include="BinarySearch.cs" />
     <Compile Include="ExpressionEvaluation.cs" />
-    <Compile Include="ExtraClasses\FixedCapacityStackOfStrings.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QueueLearning\FifoQueue.cs" />
+    <Compile Include="StackLearning\GenericStackResizing.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
