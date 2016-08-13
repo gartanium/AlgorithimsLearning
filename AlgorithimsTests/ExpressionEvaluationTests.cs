@@ -26,5 +26,17 @@ namespace Algorithims.Tests
             Assert.AreEqual(2, ExpressionEvaluation.Evaluate("(10 - 8)"));
             Assert.AreEqual(10, ExpressionEvaluation.Evaluate("(20 - 10)"));
         }
+
+        [TestMethod()]
+        public void FixTest()
+        {
+            string expected = "(1 + 1)";
+            string actual = ExpressionEvaluation.Fix("1 + 1)");
+            Assert.AreEqual(expected, actual);
+
+            string expectedTwo = "(((1 + 1) + (4 + 4) + (3 + 3) + 4) + 3)";
+            string actualTwo = ExpressionEvaluation.Fix("1 + 1) + 4 + 4) + 3 + 3) + 4) + 3)");
+            Assert.AreEqual(expectedTwo, actualTwo);
+        }
     }
 }

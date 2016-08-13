@@ -51,6 +51,7 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="AlgorithimAnalysis\TimerTests.cs" />
     <Compile Include="BinarySearchTests.cs" />
     <Compile Include="ExpressionEvaluationTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

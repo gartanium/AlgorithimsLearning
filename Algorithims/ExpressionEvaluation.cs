@@ -112,5 +112,69 @@ namespace Algorithims
 
             return values.Pop();
         }
+
+
+        /// <summary>
+        /// Input an expression missing the ( Parentheses. Returns a string with them included.
+        /// Assumes that the correct format is followed (Numbers, Right Parentheses, operators in correct, logical places).
+        /// </summary>
+        /// <param name="inputString"></param>
+        /// <returns></returns>
+        public static string Fix(string inputString)
+        {
+            int leftParCount = 0;
+            int numberCount = 0;
+            int operandsCount = 0;
+            int index = inputString.Length -1;
+
+            for(int i = index; i >= 0; i--)
+            {
+                switch(inputString.ElementAt(i))
+                {
+                    case '(':
+                        break;
+                    case ')':
+                        leftParCount++;
+                        numberCount = 0;
+                        break;
+                    case '+':
+                        operandsCount++;
+                        break;
+                    case '-':
+                        operandsCount++;
+                        break;
+                    case '*':
+                        operandsCount++;
+                        break;
+                    case '/':
+                        operandsCount++;
+                        break;
+                    case ' ':
+                        break;
+                    default:
+                        numberCount++;
+
+                        if (numberCount >= 2 && operandsCount >= 1)
+                        {
+                            inputString = inputString.Insert(i, "(");
+                            numberCount -= 2;
+                            operandsCount--;
+                            leftParCount--;
+                            
+                        }
+                        break;
+                }
+                
+            }
+
+            while(leftParCount > 0)
+            {
+                inputString = inputString.Insert(0, "(");
+                leftParCount--;
+            }
+
+            return inputString;
+
+        }
     }
 }
