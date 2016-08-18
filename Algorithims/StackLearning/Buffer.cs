@@ -22,50 +22,81 @@ namespace Algorithims.StackLearning
         /// </summary>
         public int Size
         {
-            get { return 0; }
+            get { return mLeftToRightStack.Count + mRightToLeftStack.Count; }
         }
 
         public Buffer()
         {
-             
+            mLeftToRightStack = new Stack<char>();
+            mRightToLeftStack = new Stack<char>();
         }
-        // Generate the string from the buffer.
+
+
+        /// <summary>
+        /// Generate a string from the buffer. 
+        /// </summary>
+        /// <returns></returns>
         public string GetData()
         {
-            // Create an inversted string from the left to right stack.
-            string returnValue = "";
+            // Create an inversed string from the left to right stack.
+            string inversedReturnValue = "";
             while (mLeftToRightStack.Count > 0)
             {
-                returnValue += mLeftToRightStack.Pop();
+                inversedReturnValue += mLeftToRightStack.Pop();
             }
             // Flip it because it's backwords.
-            returnValue.Reverse();
+            inversedReturnValue.Reverse();
             // The right to left stack is not backwords, add it to the return string. It is the second half of the line.
             while (mRightToLeftStack.Count > 0)
             {
-                returnValue += mRightToLeftStack.Pop();
+                inversedReturnValue += mRightToLeftStack.Pop();
             }
 
-            return returnValue;
+            string myReturnString = "";
+            for(int i = (inversedReturnValue.Length - 1); i >= 0; i--)
+            {
+                myReturnString += inversedReturnValue.ElementAt(i);
+            }
+            return myReturnString;
 
         }
-        
-        public void insert(char c) // insert c at the cursor position.
+
+
+        /// <summary>
+        /// insert c at the cursor position. 
+        /// </summary>
+        /// <param name="c"></param>
+        public void Insert(char c) 
         {
             mLeftToRightStack.Push(c);
         }
 
-        public char get() // character at the cursor position.
+
+        /// <summary>
+        /// character at the cursor position.
+        /// </summary>
+        /// <returns></returns>
+        public char Get()
         {
             return mLeftToRightStack.Peek();
         }
 
-        public char delete() // Delete and return the character at the cursor.
+
+        /// <summary>
+        /// Delete and return the character at the cursor. 
+        /// </summary>
+        /// <returns></returns>
+        public char Delete() 
         {
             return mLeftToRightStack.Pop();
         }
 
-        public void left(int k) // move the cursor k positions to the left
+
+        /// <summary>
+        /// move the cursor k positions to the left
+        /// </summary>
+        /// <param name="k"></param>
+        public void Left(int k) 
         {
             while(k > 0)
             {
@@ -74,7 +105,12 @@ namespace Algorithims.StackLearning
             }
         }
 
-        public void right(int k) // move the kursor k positions to the right
+
+        /// <summary>
+        /// move the cursor k positions to the right 
+        /// </summary>
+        /// <param name="k"></param>
+        public void Right(int k) 
         {
             while( k > 0)
             {

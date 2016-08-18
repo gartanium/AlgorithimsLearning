@@ -56,6 +56,7 @@
     <Compile Include="ExpressionEvaluationTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QueueLearning\FifoQueueTests.cs" />
+    <Compile Include="StackLearning\BufferTests.cs" />
     <Compile Include="StackLearning\GenericStackResizingTests.cs" />
   </ItemGroup>
   <ItemGroup>

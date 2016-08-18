@@ -21,8 +21,8 @@ namespace Algorithims.AlgorithimAnalysis.Tests
         public void mRunTimeTest()
         {
             int expected = 1000;
-            Timer testObject = new Timer(1000);
-            int actual = testObject.mRunTime(2000);
+            StopWatch testObject = new StopWatch(1000);
+            int actual = testObject.ElapsedTime(2000);
 
             Assert.AreEqual(expected, actual);
         }

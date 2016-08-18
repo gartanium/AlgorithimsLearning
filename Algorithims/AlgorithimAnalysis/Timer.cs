@@ -6,23 +6,23 @@ using System.Threading.Tasks;
 
 namespace Algorithims.AlgorithimAnalysis
 {
-    public class Timer
+    public class StopWatch
     {
         private int mBeginTime;
 
         /// <summary>
         /// Returns the time in milliseconds from the beginning of the timer, to the end.
         /// </summary>
-        public int mRunTime(int currentTimeInMilliseconds)
+        public int ElapsedTime(int currentTimeInMilliseconds)
         {
             return currentTimeInMilliseconds - mBeginTime;
         }
 
-        public Timer(int beginTimeInMilliseconds)
+        public StopWatch(int beginTimeInMilliseconds)
         {
             this.mBeginTime = beginTimeInMilliseconds;
         }
-
+        
 
     }
 }
