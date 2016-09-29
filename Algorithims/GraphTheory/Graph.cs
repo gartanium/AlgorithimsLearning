@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Algorithims.BagLearning;
 
-namespace AlgorithimsTests.GraphTheory
+namespace Algorithims.GraphTheory
 {
-    class Graph
+    public class Graph
     {
 
         private int mV; // number of vertexes
@@ -18,13 +19,21 @@ namespace AlgorithimsTests.GraphTheory
 
         // number of edges
         private int mE;
-        
 
         /// <summary>
         /// Number of Edges.
         /// </summary>
         public int E { get { return mE; } }
 
+        private Bag<int>[] mAdj; //Adjacency lists
+
+        public Bag<int> this[int i]
+        {
+            get
+            {
+                return mAdj[i];
+            }
+        }
 
         /// <summary>
         /// Create a V-vertex graph with no edges
@@ -32,7 +41,10 @@ namespace AlgorithimsTests.GraphTheory
         /// <param name="V"></param>
         public Graph(int V)
         {
-
+            this.mV = V; this.mE = 0;
+            mAdj = new Bag<int>[V];  // Create array of lists.
+            for (int i = 0; i < V; i++) // Initialize the list
+                mAdj[i] = new Bag<int>(); // to empty.
         }
 
 
@@ -43,7 +55,9 @@ namespace AlgorithimsTests.GraphTheory
         /// <param name="w"></param>
         public void AddEdge(int v, int w)
         {
-
+            mAdj[v].Add(w); // Add w to v's adjaceny list.
+            mAdj[w].Add(v);  // Add v to W's adjacency list.
+            mE++;
         }
 
 
@@ -57,7 +71,7 @@ namespace AlgorithimsTests.GraphTheory
         {
             List<int> adjacentToV = new List<int>();
             return adjacentToV;
-            
+
         }
 
         // string representation.
