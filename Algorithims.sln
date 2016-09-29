@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlgorithimsInterface", "Alg
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlgorithimsTests", "AlgorithimsTests\AlgorithimsTests.csproj", "{FD5A783F-BC67-4925-87C7-0457A2C9B60E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlgorithimsInterfaceTests", "AlgorithimsInterfaceTests\AlgorithimsInterfaceTests.csproj", "{4C3A6C21-CF4D-4B74-A5F4-50182928A0BB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{FD5A783F-BC67-4925-87C7-0457A2C9B60E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FD5A783F-BC67-4925-87C7-0457A2C9B60E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FD5A783F-BC67-4925-87C7-0457A2C9B60E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C3A6C21-CF4D-4B74-A5F4-50182928A0BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C3A6C21-CF4D-4B74-A5F4-50182928A0BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C3A6C21-CF4D-4B74-A5F4-50182928A0BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C3A6C21-CF4D-4B74-A5F4-50182928A0BB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

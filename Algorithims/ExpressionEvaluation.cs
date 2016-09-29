@@ -106,7 +106,6 @@ namespace Algorithims
                     default:
                         numberString += inputString[i];
                         break;
-                
                 }
             }
 
@@ -176,5 +175,7 @@ namespace Algorithims
             return inputString;
 
         }
+
+
     }
 }
