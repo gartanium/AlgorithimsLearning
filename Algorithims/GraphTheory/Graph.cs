@@ -27,6 +27,8 @@ namespace Algorithims.GraphTheory
 
         private Bag<int>[] mAdj; //Adjacency lists
 
+        public Bag<int>[] Adj { get { return mAdj; } }
+
         public Bag<int> this[int i]
         {
             get
@@ -49,7 +51,7 @@ namespace Algorithims.GraphTheory
 
 
         /// <summary>
-        /// Add edge v-w to this graph.
+        /// Add edge v-w to this graph. 
         /// </summary>
         /// <param name="v"></param>
         /// <param name="w"></param>
@@ -58,20 +60,6 @@ namespace Algorithims.GraphTheory
             mAdj[v].Add(w); // Add w to v's adjaceny list.
             mAdj[w].Add(v);  // Add v to W's adjacency list.
             mE++;
-        }
-
-
-
-        /// <summary>
-        /// Returns a list of all vertices adjacent to v.
-        /// </summary>
-        /// <param name="v"></param>
-        /// <returns></returns>
-        public List<int> Adj(int v)
-        {
-            List<int> adjacentToV = new List<int>();
-            return adjacentToV;
-
         }
 
         // string representation.

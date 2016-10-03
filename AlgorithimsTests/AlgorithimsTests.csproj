@@ -54,6 +54,8 @@
     <Compile Include="BagLearning\BagTests.cs" />
     <Compile Include="BinarySearchTests.cs" />
     <Compile Include="ExpressionEvaluationTests.cs" />
+    <Compile Include="GraphTheory\DepthFirstSearchTests.cs" />
+    <Compile Include="GraphTheory\GraphTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QueueLearning\FifoQueueTests.cs" />
     <Compile Include="StackLearning\BufferTests.cs" />
