@@ -54,6 +54,7 @@
     <Compile Include="BagLearning\BagTests.cs" />
     <Compile Include="BinarySearchTests.cs" />
     <Compile Include="ExpressionEvaluationTests.cs" />
+    <Compile Include="GraphTheory\DepthFirstPathsTests.cs" />
     <Compile Include="GraphTheory\DepthFirstSearchTests.cs" />
     <Compile Include="GraphTheory\GraphTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

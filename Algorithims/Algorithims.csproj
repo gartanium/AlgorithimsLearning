@@ -46,7 +46,8 @@
     <Compile Include="ExpressionEvaluation.cs" />
     <Compile Include="GraphTheory\DepthFirstSearch.cs" />
     <Compile Include="GraphTheory\Graph.cs" />
-    <Compile Include="GraphTheory\Paths.cs" />
+    <Compile Include="GraphTheory\DepthFirstPaths.cs" />
+    <Compile Include="GraphTheory\RectangularGraphFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QueueLearning\FifoQueue.cs" />
     <Compile Include="StackLearning\Buffer.cs" />
