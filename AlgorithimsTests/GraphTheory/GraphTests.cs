@@ -60,7 +60,7 @@ namespace Algorithims.GraphTheory.Tests
         }
 
         [TestMethod()]
-        public void NodePositionsTest()
+        public void NodePositionsTest() // Tests to see if the NodePositions method trully returns the positions of the nodes.
         {
             int[] xPos = { 0, 1, 2, 3, 4 };
             int[] yPos = { 0, 1, 2, 3, 4 };
