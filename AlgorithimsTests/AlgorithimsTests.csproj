@@ -57,6 +57,7 @@
     <Compile Include="GraphTheory\DepthFirstPathsTests.cs" />
     <Compile Include="GraphTheory\DepthFirstSearchTests.cs" />
     <Compile Include="GraphTheory\GraphTests.cs" />
+    <Compile Include="GraphTheory\RectangularGraphFactoryTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QueueLearning\FifoQueueTests.cs" />
     <Compile Include="StackLearning\BufferTests.cs" />
