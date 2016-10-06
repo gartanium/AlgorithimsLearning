@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Drawing;
 
 namespace Algorithims.GraphTheory
 {
@@ -13,9 +14,40 @@ namespace Algorithims.GraphTheory
     public static class RectangularGraphFactory
     {
         
-        public static Graph GenerateGraph(int width, int height)
+        /// <summary>
+        /// Generates a rectangular graph, with appropriatly connected vertices. Each vertex contains data for width and height.
+        /// </summary>
+        /// <param name="width">Width of the Rectangle.</param>
+        /// <param name="height">Height of the Rectangle.</param>
+        /// <param name="columns">Number of Columns.</param>
+        /// <param name="rows">Number of Rows.</param>
+        /// <returns></returns>
+        public static Graph GenerateGraph(int width, int height, int columns, int rows)
         {
-            return ConnectVertices(new Graph(width * height), width, height);
+            
+            Point[] positions = new Point[columns * rows];
+            Point[] dimensions = new Point[columns * rows];
+            int[] weight = new int[columns * rows];
+            int vertexCount = columns * rows; // Number of vertices in the graph.
+
+            Point cellDimension = new Point(5, 5);
+
+            // Provide appropriate data for the positions....
+            for(int i = 0; i < rows; i++)
+            {
+                for(int j = 0; j < columns; j++)
+                {
+                    int cursor = (i * columns) + j; // Cursor to translate from 2D to 1D.
+                    dimensions[cursor] = cellDimension; // Set each cell to have a dimension accordint to the template.
+                    positions[cursor] = new Point(i * cellDimension.X, j * cellDimension.Y); // Each position is based off of the itteration, and the dimensions
+                    weight[cursor] = 1; // No deviating weight necissary (for now). 
+                }
+            }
+
+            Graph g = new Graph(vertexCount, positions, dimensions, weight);
+
+
+            return ConnectVertices(g, columns, rows);
         }
 
         private static Graph ConnectVertices(Graph graph, int width, int height)
