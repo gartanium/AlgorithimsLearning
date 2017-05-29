@@ -216,7 +216,7 @@ namespace Algorithims.GraphTheory
         public int GetVertex(int x, int y)
         {
             Point p = new Point(x, y);
-            for (int i = 0; i < mNodeArray.Length; i++)
+            for (int i = 0;  i < mNodeArray.Length; i++)
             {
                 if (mNodeArray[i].BoundingBox.Contains(p))
                 {
@@ -225,7 +225,7 @@ namespace Algorithims.GraphTheory
 
             }
 
-            throw new ArgumentOutOfRangeException("param x and y are out of range!");
+            throw new ArgumentOutOfRangeException("param x and y are out of range! X: " + x.ToString() + " Y: " + y.ToString());
         }
 
         // Input a stack of nodes, output a stack of positions.
@@ -246,7 +246,7 @@ namespace Algorithims.GraphTheory
                     if (vertex <= this.mV) // Make sure that the vertex exists...
                     {
                         // Get it's position, then queue it up.
-                        Point position = this.mNodeArray[vertex].Position;
+                        Point position = this.GetVertexPosition(vertex);
                         result.Enqueue(position);
                     }
                     else
